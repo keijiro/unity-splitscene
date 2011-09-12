@@ -18,6 +18,8 @@ function ClearOverlay() {
 	if (overlay) DestroyImmediate(overlay);
 }
 
+#if UNITY_EDITOR
+
 function PushSceneObjects() {
 	var cache = new GameObject("_cache");
 	
@@ -59,3 +61,5 @@ function PopSceneObjects() {
 	
 	DestroyImmediate(cache);
 }
+
+#endif
